@@ -10,7 +10,6 @@
 		A5DA481F2453929E00216AAB /* CollectionViewControllerEdificios.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5DA481E2453929E00216AAB /* CollectionViewControllerEdificios.swift */; };
 		A5DA48212453932F00216AAB /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5DA48202453932F00216AAB /* CollectionViewCell.swift */; };
 		CD058A63245363E70009F6D7 /* inicioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD058A62245363E70009F6D7 /* inicioViewController.swift */; };
-		CD058A65245369D90009F6D7 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD058A64245369D90009F6D7 /* TableViewController.swift */; };
 		CD078AB92451A239009CF358 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD078AB82451A239009CF358 /* AppDelegate.swift */; };
 		CD078ABB2451A239009CF358 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD078ABA2451A239009CF358 /* ViewController.swift */; };
 		CD078ABE2451A23A009CF358 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD078ABC2451A23A009CF358 /* Main.storyboard */; };
@@ -18,6 +17,11 @@
 		CD078AC32451A23C009CF358 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD078AC12451A23C009CF358 /* LaunchScreen.storyboard */; };
 		CD078ACE2451A23C009CF358 /* GuideUJA_UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD078ACD2451A23C009CF358 /* GuideUJA_UITests.swift */; };
 		CD078AD92451A23C009CF358 /* GuideUJA_UIUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD078AD82451A23C009CF358 /* GuideUJA_UIUITests.swift */; };
+		CD24CC9A245F6BCB0043C56C /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD24CC99245F6BCB0043C56C /* TableViewController.swift */; };
+		CD24CC9D245F6DAA0043C56C /* TitulacionesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD24CC9B245F6DAA0043C56C /* TitulacionesCell.swift */; };
+		CD24CC9E245F6DAA0043C56C /* TitulacionesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD24CC9C245F6DAA0043C56C /* TitulacionesCell.xib */; };
+		CD24CCA2245F6E430043C56C /* TitulacionesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD24CCA0245F6E430043C56C /* TitulacionesVC.swift */; };
+		CD24CCA3245F6E430043C56C /* TitulacionesVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD24CCA1245F6E430043C56C /* TitulacionesVC.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,7 +45,6 @@
 		A5DA481E2453929E00216AAB /* CollectionViewControllerEdificios.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewControllerEdificios.swift; sourceTree = "<group>"; };
 		A5DA48202453932F00216AAB /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		CD058A62245363E70009F6D7 /* inicioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = inicioViewController.swift; sourceTree = "<group>"; };
-		CD058A64245369D90009F6D7 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		CD078AB52451A239009CF358 /* GuideUJA_UI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GuideUJA_UI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD078AB82451A239009CF358 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CD078ABA2451A239009CF358 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -55,6 +58,11 @@
 		CD078AD42451A23C009CF358 /* GuideUJA_UIUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GuideUJA_UIUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD078AD82451A23C009CF358 /* GuideUJA_UIUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuideUJA_UIUITests.swift; sourceTree = "<group>"; };
 		CD078ADA2451A23C009CF358 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CD24CC99245F6BCB0043C56C /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		CD24CC9B245F6DAA0043C56C /* TitulacionesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitulacionesCell.swift; sourceTree = "<group>"; };
+		CD24CC9C245F6DAA0043C56C /* TitulacionesCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TitulacionesCell.xib; sourceTree = "<group>"; };
+		CD24CCA0245F6E430043C56C /* TitulacionesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitulacionesVC.swift; sourceTree = "<group>"; };
+		CD24CCA1245F6E430043C56C /* TitulacionesVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TitulacionesVC.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +93,7 @@
 		CD078AAC2451A239009CF358 = {
 			isa = PBXGroup;
 			children = (
+				CD24CC9F245F6DE80043C56C /* titulaciones */,
 				CD078AB72451A239009CF358 /* GuideUJA_UI */,
 				CD078ACC2451A23C009CF358 /* GuideUJA_UITests */,
 				CD078AD72451A23C009CF358 /* GuideUJA_UIUITests */,
@@ -107,7 +116,6 @@
 			children = (
 				CD078AB82451A239009CF358 /* AppDelegate.swift */,
 				CD078ABA2451A239009CF358 /* ViewController.swift */,
-				CD058A64245369D90009F6D7 /* TableViewController.swift */,
 				CD058A62245363E70009F6D7 /* inicioViewController.swift */,
 				CD078ABC2451A23A009CF358 /* Main.storyboard */,
 				CD078ABF2451A23C009CF358 /* Assets.xcassets */,
@@ -135,6 +143,18 @@
 				CD078ADA2451A23C009CF358 /* Info.plist */,
 			);
 			path = GuideUJA_UIUITests;
+			sourceTree = "<group>";
+		};
+		CD24CC9F245F6DE80043C56C /* titulaciones */ = {
+			isa = PBXGroup;
+			children = (
+				CD24CC9B245F6DAA0043C56C /* TitulacionesCell.swift */,
+				CD24CC9C245F6DAA0043C56C /* TitulacionesCell.xib */,
+				CD24CC99245F6BCB0043C56C /* TableViewController.swift */,
+				CD24CCA0245F6E430043C56C /* TitulacionesVC.swift */,
+				CD24CCA1245F6E430043C56C /* TitulacionesVC.xib */,
+			);
+			path = titulaciones;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -241,7 +261,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD24CCA3245F6E430043C56C /* TitulacionesVC.xib in Resources */,
 				CD078AC32451A23C009CF358 /* LaunchScreen.storyboard in Resources */,
+				CD24CC9E245F6DAA0043C56C /* TitulacionesCell.xib in Resources */,
 				CD078AC02451A23C009CF358 /* Assets.xcassets in Resources */,
 				CD078ABE2451A23A009CF358 /* Main.storyboard in Resources */,
 			);
@@ -269,11 +291,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				CD058A63245363E70009F6D7 /* inicioViewController.swift in Sources */,
+				CD24CC9A245F6BCB0043C56C /* TableViewController.swift in Sources */,
 				CD078ABB2451A239009CF358 /* ViewController.swift in Sources */,
+				CD24CC9D245F6DAA0043C56C /* TitulacionesCell.swift in Sources */,
+				CD24CCA2245F6E430043C56C /* TitulacionesVC.swift in Sources */,
 				A5DA48212453932F00216AAB /* CollectionViewCell.swift in Sources */,
 				A5DA481F2453929E00216AAB /* CollectionViewControllerEdificios.swift in Sources */,
 				CD078AB92451A239009CF358 /* AppDelegate.swift in Sources */,
-				CD058A65245369D90009F6D7 /* TableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
