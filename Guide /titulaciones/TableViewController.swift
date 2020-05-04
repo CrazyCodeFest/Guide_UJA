@@ -18,6 +18,10 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
         super.viewDidLoad()
         tableView.tableFooterView = UIView()
         // Do any additional setup after loading the view.
+        
+        tableView.dataSource = self
+        
+        
     }
     
     
@@ -27,7 +31,11 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "TitulacionesCell", for: indexPath)
+        cell.textLabel?.numberOfLines = 0
         cell.textLabel?.text = Titulaciones[indexPath.row]
+        
+        
+        
         return cell
     }
 
@@ -37,5 +45,9 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
         self.navigationController?.pushViewController(titulacionesVC, animated: true)
         tableView.deselectRow(at: indexPath, animated: true)
     }
-
+    
+    
 }
+
+
+
