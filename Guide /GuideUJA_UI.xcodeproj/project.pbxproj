@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A58E20FE2462949500DE4C40 /* MapaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58E20FD2462949500DE4C40 /* MapaViewController.swift */; };
 		A5DA481F2453929E00216AAB /* CollectionViewControllerEdificios.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5DA481E2453929E00216AAB /* CollectionViewControllerEdificios.swift */; };
 		A5DA48212453932F00216AAB /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5DA48202453932F00216AAB /* CollectionViewCell.swift */; };
 		CD058A63245363E70009F6D7 /* inicioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD058A62245363E70009F6D7 /* inicioViewController.swift */; };
@@ -42,6 +43,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A58E20FD2462949500DE4C40 /* MapaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapaViewController.swift; sourceTree = "<group>"; };
 		A5DA481E2453929E00216AAB /* CollectionViewControllerEdificios.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewControllerEdificios.swift; sourceTree = "<group>"; };
 		A5DA48202453932F00216AAB /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		CD058A62245363E70009F6D7 /* inicioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = inicioViewController.swift; sourceTree = "<group>"; };
@@ -90,9 +92,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A58E20FC246293CF00DE4C40 /* Mapa */ = {
+			isa = PBXGroup;
+			children = (
+				A58E20FD2462949500DE4C40 /* MapaViewController.swift */,
+			);
+			path = Mapa;
+			sourceTree = "<group>";
+		};
 		CD078AAC2451A239009CF358 = {
 			isa = PBXGroup;
 			children = (
+				A58E20FC246293CF00DE4C40 /* Mapa */,
 				CD24CC9F245F6DE80043C56C /* titulaciones */,
 				CD078AB72451A239009CF358 /* GuideUJA_UI */,
 				CD078ACC2451A23C009CF358 /* GuideUJA_UITests */,
@@ -225,13 +236,16 @@
 				TargetAttributes = {
 					CD078AB42451A239009CF358 = {
 						CreatedOnToolsVersion = 10.0;
+						LastSwiftMigration = 1020;
 					};
 					CD078AC82451A23C009CF358 = {
 						CreatedOnToolsVersion = 10.0;
+						LastSwiftMigration = 1020;
 						TestTargetID = CD078AB42451A239009CF358;
 					};
 					CD078AD32451A23C009CF358 = {
 						CreatedOnToolsVersion = 10.0;
+						LastSwiftMigration = 1020;
 						TestTargetID = CD078AB42451A239009CF358;
 					};
 				};
@@ -294,6 +308,7 @@
 				CD24CC9A245F6BCB0043C56C /* TableViewController.swift in Sources */,
 				CD078ABB2451A239009CF358 /* ViewController.swift in Sources */,
 				CD24CC9D245F6DAA0043C56C /* TitulacionesCell.swift in Sources */,
+				A58E20FE2462949500DE4C40 /* MapaViewController.swift in Sources */,
 				CD24CCA2245F6E430043C56C /* TitulacionesVC.swift in Sources */,
 				A5DA48212453932F00216AAB /* CollectionViewCell.swift in Sources */,
 				A5DA481F2453929E00216AAB /* CollectionViewControllerEdificios.swift in Sources */,

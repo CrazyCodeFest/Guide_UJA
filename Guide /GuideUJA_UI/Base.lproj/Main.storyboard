@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="plt-8U-xTE">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="plt-8U-xTE">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -17,8 +17,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="LogoUJA" translatesAutoresizingMaskIntoConstraints="NO" id="jWp-bj-K6Z">
-                                <rect key="frame" x="112" y="491" width="150" height="107"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LogoUJA" translatesAutoresizingMaskIntoConstraints="NO" id="jWp-bj-K6Z">
+                                <rect key="frame" x="112" y="491" width="151" height="107"/>
                             </imageView>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ilh-mq-CYb">
                                 <rect key="frame" x="0.0" y="64" width="375" height="399"/>
@@ -31,9 +31,12 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="b2P-tE-bWQ" firstAttribute="trailing" secondItem="jWp-bj-K6Z" secondAttribute="trailing" constant="112" id="9Jc-uj-FEW"/>
+                            <constraint firstItem="jWp-bj-K6Z" firstAttribute="top" secondItem="Ilh-mq-CYb" secondAttribute="bottom" constant="28" id="Ef6-kW-8e8"/>
                             <constraint firstItem="jWp-bj-K6Z" firstAttribute="centerX" secondItem="89w-JS-jrx" secondAttribute="centerX" id="Gmg-GW-fdb"/>
                             <constraint firstItem="89w-JS-jrx" firstAttribute="centerX" secondItem="MtI-4D-kNd" secondAttribute="centerX" id="Jlv-rT-ezI"/>
                             <constraint firstItem="Ilh-mq-CYb" firstAttribute="centerX" secondItem="MtI-4D-kNd" secondAttribute="centerX" id="JrN-GG-Yjm"/>
+                            <constraint firstItem="b2P-tE-bWQ" firstAttribute="bottom" secondItem="jWp-bj-K6Z" secondAttribute="bottom" constant="20" id="MJ5-o7-JqC"/>
                             <constraint firstItem="Ilh-mq-CYb" firstAttribute="leading" secondItem="MtI-4D-kNd" secondAttribute="leading" id="RKQ-PB-mLC"/>
                             <constraint firstItem="b2P-tE-bWQ" firstAttribute="bottom" secondItem="jWp-bj-K6Z" secondAttribute="bottom" constant="20" id="aDR-Y3-Buu"/>
                             <constraint firstItem="jWp-bj-K6Z" firstAttribute="top" secondItem="89w-JS-jrx" secondAttribute="bottom" id="eYq-3N-b3q"/>
@@ -54,7 +57,7 @@
             </objects>
             <point key="canvasLocation" x="-1514.4000000000001" y="1334.4827586206898"/>
         </scene>
-        <!--Collection View Controller Edificios-->
+        <!--Edificios-->
         <scene sceneID="1k6-Tf-OZA">
             <objects>
                 <collectionViewController restorationIdentifier=" " storyboardIdentifier="CollectionViewControllerEdificios" id="ZOd-Nm-BZK" customClass="CollectionViewControllerEdificios" customModule="GuideUJA_UI" customModuleProvider="target" sceneMemberID="viewController">
@@ -100,7 +103,7 @@
                             <outlet property="delegate" destination="ZOd-Nm-BZK" id="PrK-61-FmB"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" id="xLa-47-HoP"/>
+                    <navigationItem key="navigationItem" title="Edificios" id="xLa-47-HoP"/>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e3V-iM-vfg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -205,21 +208,29 @@
             </objects>
             <point key="canvasLocation" x="-1514" y="499"/>
         </scene>
-        <!--View Controller-->
+        <!--Mapa-->
         <scene sceneID="C5m-GY-lhA">
             <objects>
-                <viewController id="J8n-Ru-IC3" sceneMemberID="viewController">
+                <viewController id="J8n-Ru-IC3" customClass="MapaViewController" customModule="GuideUJA_UI" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="g1Y-NZ-3KQ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.84465640779999995" green="0.51457053419999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Mvl-8o-RA9">
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </mapView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="ife-J0-Myq"/>
                     </view>
-                    <navigationItem key="navigationItem" id="0G4-Kv-Spm"/>
+                    <navigationItem key="navigationItem" title="Mapa" id="0G4-Kv-Spm"/>
+                    <connections>
+                        <outlet property="mapView" destination="Mvl-8o-RA9" id="LW6-D6-nVd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="46k-1I-COw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1329" y="1335"/>
+            <point key="canvasLocation" x="1328.8" y="1334.4827586206898"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="fcU-9j-aMF">
@@ -271,6 +282,13 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ZZh-1W-S0H">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.29010754820000001" green="0.4886764884" blue="0.30719211699999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -310,6 +328,9 @@
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.1760754585" green="0.411311388" blue="0.19647589330000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -322,7 +343,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="LogoUJA" width="260" height="194"/>
+        <image name="LogoUJA" width="130" height="97"/>
         <image name="edificio-1" width="30" height="30"/>
         <image name="home" width="30" height="30"/>
         <image name="mapa" width="30" height="30"/>
