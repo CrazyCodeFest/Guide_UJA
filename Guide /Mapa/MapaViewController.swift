@@ -14,6 +14,9 @@ class MapaViewController: UIViewController {
     //API CLLocationManagetr
     private let locationManager = CLLocationManager();
     
+    //Posicion actual
+    private var currentCoordinate: CLLocationCoordinate2D?
+    
     // Nuestro MapView
     @IBOutlet weak var mapView: MKMapView!
     override func viewDidLoad() {
@@ -23,15 +26,28 @@ class MapaViewController: UIViewController {
     
     private func configureLocationServices(){
          locationManager.delegate = self
+        
+        let status = CLLocationManager.authorizationStatus()
     
-        //Pedimos la localizacion
-        if CLLocationManager.authorizationStatus() == .notDetermined{
+        //Si la autorizacion del usuario para utilizar la localizacion no la sabemos
+        if status == .notDetermined{
             //En nuestro caso, elegimos la autorizacion para siempre
             locationManager.requestAlwaysAuthorization()
-        }else{
             
+         //Si ya nos ha dado autorizacion previa
+        }else if status == .authorizedAlways || status == .authorizedWhenInUse{
+            mapView.showsUserLocation = true;
+            locationManager.desiredAccuracy = kCLLocationAccuracyBest
+            locationManager.startUpdatingLocation()
             
         }
+    }
+    
+    private func zoomToLatestLocation(with coordinate: CLLocationCoordinate2D){
+        
+        let zoomRegion = MKCoordinateRegion(center: coordinate,latitudinalMeters: 1000,longitudinalMeters: 1000)
+        mapView.setRegion(zoomRegion, animated: true)
+        
     }
 }
 
@@ -39,11 +55,20 @@ class MapaViewController: UIViewController {
 extension MapaViewController: CLLocationManagerDelegate{
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        print("Did get latest location")
         
+        guard let latestLocation = locations.first else {return}
+        
+        currentCoordinate = latestLocation.coordinate
+        
+        if currentCoordinate == nil {
+            zoomToLatestLocation(with: latestLocation.coordinate)
+        }
+        currentCoordinate = latestLocation.coordinate
     }
 
     //El usuario tiene que dar permiso para ver la localizacion para actualizarla
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
-        
+        print("the status chaged")
     }
 }
