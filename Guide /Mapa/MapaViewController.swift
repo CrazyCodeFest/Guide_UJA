@@ -36,16 +36,22 @@ class MapaViewController: UIViewController {
             
          //Si ya nos ha dado autorizacion previa
         }else if status == .authorizedAlways || status == .authorizedWhenInUse{
+            //Ahora podemos mostrar la localizacion ya que el usuario nos ha dado permiso
             mapView.showsUserLocation = true;
+            //Dejamos que elija la exactitud que considere mejor
             locationManager.desiredAccuracy = kCLLocationAccuracyBest
+            //Vamos actualizando la localizacion
             locationManager.startUpdatingLocation()
             
         }
     }
     
+    //Funcion que hace zoom en una parte especifica del pama
     private func zoomToLatestLocation(with coordinate: CLLocationCoordinate2D){
         
+        //Hacemos zoom en 1000 m alrededor
         let zoomRegion = MKCoordinateRegion(center: coordinate,latitudinalMeters: 1000,longitudinalMeters: 1000)
+        //Permitimos que este zoom se modifique por el usuario
         mapView.setRegion(zoomRegion, animated: true)
         
     }
