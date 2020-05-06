@@ -12,6 +12,8 @@ class TitulacionesVC: UIViewController, UITableViewDataSource, UITableViewDelega
 
     @IBOutlet weak var tableView: UITableView!
     
+    //Informacion de titulacines, 1 vector = grados, 2 vector = Másteres, 3 Vector = doctorados
+    
     let TitulacionesData = [
         ["Grado en Estudios Ingleses", "Grado en Filología Hispánica","Grado en Geografía e Historia", "Grado en Historia del Arte", "Grado en Historia del Arte",
          "Grado Interuniversitario en Arqueología", "Grado en Biología", "Grado en Ciencias Ambientales", "Grado en Química", "Doble Grado en enfermería y en Fisioterapia",
@@ -38,14 +40,19 @@ class TitulacionesVC: UIViewController, UITableViewDataSource, UITableViewDelega
         tableView.register(nib, forCellReuseIdentifier: "TitulacionesCell")
     }
     
+    
+    //Función usada en TableViewController para conocer la selección de la fila
     func customInicio(TitulacionIndex: Int, title: String){
         self.TitulacionIndex = TitulacionIndex
         self .title = title
     }
     
+    
+    //Muestra tantas filas como elementos del vector
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return TitulacionesData[TitulacionIndex].count
     }
+    
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "TitulacionesCell", for: indexPath) as!  TitulacionesCell
