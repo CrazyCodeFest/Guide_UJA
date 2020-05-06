@@ -11,7 +11,7 @@ import MapKit
 
 class MapaViewController: UIViewController {
 
-    //API CLLocationManagetr
+    //Objeto que utilizamos para empezar o parar el envio de evento de locacizacion
     private let locationManager = CLLocationManager();
     
     //Posicion actual
@@ -21,27 +21,26 @@ class MapaViewController: UIViewController {
     @IBOutlet weak var mapView: MKMapView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        //Cuando se ha cargado la vista, configuramos los servicios de localizacion
         configureLocationServices()
     }
     
     private func configureLocationServices(){
-         locationManager.delegate = self
         
+        locationManager.delegate = self
+        
+        //Guardamos si tenemos autorizacion del usuario para usar los servicios de localizacion
         let status = CLLocationManager.authorizationStatus()
     
         //Si la autorizacion del usuario para utilizar la localizacion no la sabemos
         if status == .notDetermined{
-            //En nuestro caso, elegimos la autorizacion para siempre
+            //En nuestro caso, pedimos autorizacion siempre
             locationManager.requestAlwaysAuthorization()
             
          //Si ya nos ha dado autorizacion previa
         }else if status == .authorizedAlways || status == .authorizedWhenInUse{
-            //Ahora podemos mostrar la localizacion ya que el usuario nos ha dado permiso
-            mapView.showsUserLocation = true;
-            //Dejamos que elija la exactitud que considere mejor
-            locationManager.desiredAccuracy = kCLLocationAccuracyBest
-            //Vamos actualizando la localizacion
-            locationManager.startUpdatingLocation()
+            //Llamamos a la funcion que nos permite mostrar la ubicacion
+            beginLocationUpdates(locationManager: locationManager)
             
         }
     }
@@ -50,9 +49,20 @@ class MapaViewController: UIViewController {
     private func zoomToLatestLocation(with coordinate: CLLocationCoordinate2D){
         
         //Hacemos zoom en 1000 m alrededor
-        let zoomRegion = MKCoordinateRegion(center: coordinate,latitudinalMeters: 1000,longitudinalMeters: 1000)
+        let zoomRegion = MKCoordinateRegion(center: coordinate,latitudinalMeters: 40,longitudinalMeters: 40)
+        
         //Permitimos que este zoom se modifique por el usuario
-        mapView.setRegion(zoomRegion, animated: true)
+        mapView.setRegion(zoomRegion,animated: false)
+        
+    }
+    
+    private func beginLocationUpdates(locationManager:CLLocationManager){
+        //Ahora podemos mostrar la localizacion ya que el usuario nos ha dado permiso
+        mapView.showsUserLocation = true;
+        //Dejamos que elija la exactitud que considere mejor
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        //Vamos actualizando la localizacion
+        locationManager.startUpdatingLocation()
         
     }
 }
@@ -60,7 +70,10 @@ class MapaViewController: UIViewController {
 
 extension MapaViewController: CLLocationManagerDelegate{
     
+    //Le dice al delegate que existen nuevos datos de localizacion
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        
+        //Para depurar
         print("Did get latest location")
         
         guard let latestLocation = locations.first else {return}
@@ -73,8 +86,11 @@ extension MapaViewController: CLLocationManagerDelegate{
         currentCoordinate = latestLocation.coordinate
     }
 
-    //El usuario tiene que dar permiso para ver la localizacion para actualizarla
+    //Le dice al delegate si la autorizacion para ver la localizacion cambia
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
         print("the status chaged")
+        if status == .authorizedAlways || status == .authorizedWhenInUse{
+            beginLocationUpdates(locationManager: manager)
+        }
     }
 }
