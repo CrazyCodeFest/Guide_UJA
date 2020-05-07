@@ -23,6 +23,8 @@
 		CD24CC9E245F6DAA0043C56C /* TitulacionesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD24CC9C245F6DAA0043C56C /* TitulacionesCell.xib */; };
 		CD24CCA2245F6E430043C56C /* TitulacionesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD24CCA0245F6E430043C56C /* TitulacionesVC.swift */; };
 		CD24CCA3245F6E430043C56C /* TitulacionesVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD24CCA1245F6E430043C56C /* TitulacionesVC.xib */; };
+		CD709FFE246491FD00E170DA /* NotesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD709FFD246491FD00E170DA /* NotesTableViewController.swift */; };
+		CD70A000246494A300E170DA /* EditNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD709FFF246494A300E170DA /* EditNoteViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +67,8 @@
 		CD24CC9C245F6DAA0043C56C /* TitulacionesCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TitulacionesCell.xib; sourceTree = "<group>"; };
 		CD24CCA0245F6E430043C56C /* TitulacionesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitulacionesVC.swift; sourceTree = "<group>"; };
 		CD24CCA1245F6E430043C56C /* TitulacionesVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TitulacionesVC.xib; sourceTree = "<group>"; };
+		CD709FFD246491FD00E170DA /* NotesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesTableViewController.swift; sourceTree = "<group>"; };
+		CD709FFF246494A300E170DA /* EditNoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditNoteViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,7 +99,6 @@
 		A58E20FC246293CF00DE4C40 /* Mapa */ = {
 			isa = PBXGroup;
 			children = (
-				A58E20FD2462949500DE4C40 /* MapaViewController.swift */,
 			);
 			path = Mapa;
 			sourceTree = "<group>";
@@ -125,10 +128,13 @@
 		CD078AB72451A239009CF358 /* GuideUJA_UI */ = {
 			isa = PBXGroup;
 			children = (
+				A58E20FD2462949500DE4C40 /* MapaViewController.swift */,
 				CD078AB82451A239009CF358 /* AppDelegate.swift */,
 				CD078ABA2451A239009CF358 /* ViewController.swift */,
 				CD058A62245363E70009F6D7 /* inicioViewController.swift */,
 				CD078ABC2451A23A009CF358 /* Main.storyboard */,
+				CD709FFF246494A300E170DA /* EditNoteViewController.swift */,
+				CD709FFD246491FD00E170DA /* NotesTableViewController.swift */,
 				CD078ABF2451A23C009CF358 /* Assets.xcassets */,
 				CD078AC12451A23C009CF358 /* LaunchScreen.storyboard */,
 				CD078AC42451A23C009CF358 /* Info.plist */,
@@ -308,11 +314,13 @@
 				CD24CC9A245F6BCB0043C56C /* TableViewController.swift in Sources */,
 				CD078ABB2451A239009CF358 /* ViewController.swift in Sources */,
 				CD24CC9D245F6DAA0043C56C /* TitulacionesCell.swift in Sources */,
+				CD70A000246494A300E170DA /* EditNoteViewController.swift in Sources */,
 				A58E20FE2462949500DE4C40 /* MapaViewController.swift in Sources */,
 				CD24CCA2245F6E430043C56C /* TitulacionesVC.swift in Sources */,
 				A5DA48212453932F00216AAB /* CollectionViewCell.swift in Sources */,
 				A5DA481F2453929E00216AAB /* CollectionViewControllerEdificios.swift in Sources */,
 				CD078AB92451A239009CF358 /* AppDelegate.swift in Sources */,
+				CD709FFE246491FD00E170DA /* NotesTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
