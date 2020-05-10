@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TitulacionesVC" customModule="GuideUJA_UI" customModuleProvider="target">
             <connections>
+                <outlet property="searchBar" destination="98B-hu-2HJ" id="I84-3j-D1B"/>
                 <outlet property="tableView" destination="QMf-Wt-OUH" id="UKL-8w-88j"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -21,16 +22,30 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="QMf-Wt-OUH">
-                    <rect key="frame" x="16" y="20" width="336" height="647"/>
+                    <rect key="frame" x="0.0" y="76" width="375" height="591"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="alr-ct-czm"/>
+                        <outlet property="delegate" destination="-1" id="fVY-QM-RlH"/>
+                    </connections>
                 </tableView>
+                <searchBar contentMode="redraw" placeholder="Titulación" translatesAutoresizingMaskIntoConstraints="NO" id="98B-hu-2HJ">
+                    <rect key="frame" x="0.0" y="20" width="375" height="56"/>
+                    <textInputTraits key="textInputTraits"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="WhT-PE-fdZ"/>
+                    </connections>
+                </searchBar>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="QMf-Wt-OUH" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="Ewg-vw-H9U"/>
-                <constraint firstItem="QMf-Wt-OUH" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leadingMargin" id="ipt-fm-nYG"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="QMf-Wt-OUH" secondAttribute="trailing" constant="23" id="r6o-Xo-XFi"/>
-                <constraint firstItem="QMf-Wt-OUH" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="w7c-aU-KGZ"/>
+                <constraint firstItem="98B-hu-2HJ" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="4IB-Jq-S6l"/>
+                <constraint firstItem="QMf-Wt-OUH" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="4ia-Jz-PRc"/>
+                <constraint firstItem="98B-hu-2HJ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="5gd-jG-jPT"/>
+                <constraint firstItem="QMf-Wt-OUH" firstAttribute="top" secondItem="98B-hu-2HJ" secondAttribute="bottom" symbolic="YES" id="8ca-r8-qOE"/>
+                <constraint firstItem="QMf-Wt-OUH" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="nTf-cB-zOu"/>
+                <constraint firstItem="QMf-Wt-OUH" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="sYB-wa-7Hs"/>
+                <constraint firstItem="98B-hu-2HJ" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="zqT-T0-crN"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="132" y="154.27286356821591"/>

@@ -8,9 +8,10 @@
 
 import UIKit
 
-class TitulacionesVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class TitulacionesVC: UIViewController, UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate{
 
     @IBOutlet weak var tableView: UITableView!
+   
     
     //Informacion de titulacines, 1 vector = grados, 2 vector = Másteres, 3 Vector = doctorados
     
@@ -27,43 +28,80 @@ class TitulacionesVC: UIViewController, UITableViewDataSource, UITableViewDelega
         ["Doctorado en Aceites de Oliva", "Doctorado en Avances en Ingeniería de Materiales y Energías Sostenibles", "Doctorado en Biología Molecular y Celular", "Doctorado en Ciencia y Tecnología de la Tierra y del Medio Ambiente", "Doctorado en Derecho", "Doctorado en Energías Renovables", "Doctorado en Innovación Didáctica y Formación de Profesorado", "Doctorado en Psicología", "Doctorado en Química", "Doctorado en Seguridad de los Alimentos", "Doctorado en Tecnologías de la Información y la Comunicación", "Doctorado Interuniversitario en Arqueología Espacial", "Doctorado Interuniversitario en Ciencias de la Salud", "Doctorado Interuniversitario en Ciencias Económicas, Empresariales y Jurídicas", "Doctorado Interuniversitario en Cuidados Integrales y Servicios de Salud", "Doctorado Interuniversitario en Estudios Migratorios ", "Doctorado Interuniversitario en Lenguas y Culturas", "Doctorado Interuniversitario en Matemáticas", "Doctorado Interuniversitario en Mecánica de Fluidos", "Doctorado Interuniversitario en Patrimonio"]
     
     ]
-    
+   
+    @IBOutlet weak var searchBar: UISearchBar!
     var TitulacionIndex: Int!
+
+    var filteredTitulation = [[String]] ()
+    
+  
+    var isSearching = false
+  
+    
+   
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+       
+        
         self.tableView.dataSource = self
         self.tableView.delegate = self
        
         let nib = UINib (nibName: "TitulacionesCell", bundle: nil)
         tableView.register(nib, forCellReuseIdentifier: "TitulacionesCell")
+        
+        
+        
     }
     
+    
+   
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        print("hola")
+        filteredTitulation = [TitulacionesData[TitulacionIndex].filter({ $0.lowercased().prefix(searchText.count) == searchText.lowercased()})]
+        
+        isSearching = true
+        print(isSearching)
+        tableView.reloadData()
+    }
+   
+   
     
     //Función usada en TableViewController para conocer la selección de la fila
     func customInicio(TitulacionIndex: Int, title: String){
         self.TitulacionIndex = TitulacionIndex
-        self .title = title
+        self.title = title
     }
     
     
     //Muestra tantas filas como elementos del vector
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return TitulacionesData[TitulacionIndex].count
+        if isSearching{
+            return filteredTitulation[0].count
+        }else{
+            return TitulacionesData[TitulacionIndex].count
+        }
+      
     }
     
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "TitulacionesCell", for: indexPath) as!  TitulacionesCell
         cell.textLabel?.numberOfLines = 0
+        if isSearching{
+            cell.textLabel?.text = filteredTitulation[0][indexPath.row]
+        }else{
+            cell.textLabel?.text = TitulacionesData[TitulacionIndex] [indexPath.row]
+        }
         
-        cell.textLabel?.text = TitulacionesData[TitulacionIndex] [indexPath.row]
         
         return cell
     }
 
 
+   
+    
     /*
     // MARK: - Navigation
 
@@ -73,5 +111,9 @@ class TitulacionesVC: UIViewController, UITableViewDataSource, UITableViewDelega
         // Pass the selected object to the new view controller.
     }
     */
+    
+   
 
 }
+
+
