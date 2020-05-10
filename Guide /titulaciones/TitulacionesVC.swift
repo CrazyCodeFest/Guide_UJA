@@ -58,11 +58,12 @@ class TitulacionesVC: UIViewController, UITableViewDataSource, UITableViewDelega
     
    
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        print("hola")
+        
         filteredTitulation = [TitulacionesData[TitulacionIndex].filter({ $0.lowercased().prefix(searchText.count) == searchText.lowercased()})]
         
+        
         isSearching = true
-        print(isSearching)
+        
         tableView.reloadData()
     }
    
