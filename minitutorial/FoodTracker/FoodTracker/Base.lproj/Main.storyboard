@@ -174,7 +174,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="gDq-o8-ouX">
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gDq-o8-ouX">
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                             </mapView>
                         </subviews>
@@ -186,10 +186,13 @@
                             <constraint firstItem="gDq-o8-ouX" firstAttribute="top" secondItem="pwT-SE-RMe" secondAttribute="bottom" id="uoi-iC-T7E"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="MapView" destination="gDq-o8-ouX" id="Qes-Yx-INL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AAK-KX-nad" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2898.5507246376815" y="135.9375"/>
+            <point key="canvasLocation" x="2972" y="137"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="v7c-Cq-WhV">
