@@ -17,6 +17,7 @@ class Meal: NSObject, NSCoding {
     var name: String
     var photo: UIImage?
     var rating: Int
+    //var location:
     
     //MARK: Archiving Paths
     static let DocumentsDirectory = FileManager().urls(for: .documentDirectory, in: .userDomainMask).first!
@@ -28,6 +29,7 @@ class Meal: NSObject, NSCoding {
         static let name = "name"
         static let photo = "photo"
         static let rating = "rating"
+        static let location = "location"
     }
     
     //MARK: Initialization
@@ -53,6 +55,7 @@ class Meal: NSObject, NSCoding {
         self.name = name
         self.photo = photo
         self.rating = rating
+        //self.location = location
         
     }
     
@@ -62,6 +65,7 @@ class Meal: NSObject, NSCoding {
         aCoder.encode(name, forKey: PropertyKey.name)
         aCoder.encode(photo, forKey: PropertyKey.photo)
         aCoder.encode(rating, forKey: PropertyKey.rating)
+        //aCoder.encode(location,forKey: PropertyKey.location)
     }
     
     required convenience init?(coder aDecoder: NSCoder) {
