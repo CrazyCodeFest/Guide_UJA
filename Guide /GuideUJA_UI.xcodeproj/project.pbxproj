@@ -99,6 +99,7 @@
 		A58E20FC246293CF00DE4C40 /* Mapa */ = {
 			isa = PBXGroup;
 			children = (
+				A58E20FD2462949500DE4C40 /* MapaViewController.swift */,
 			);
 			path = Mapa;
 			sourceTree = "<group>";
@@ -128,7 +129,6 @@
 		CD078AB72451A239009CF358 /* GuideUJA_UI */ = {
 			isa = PBXGroup;
 			children = (
-				A58E20FD2462949500DE4C40 /* MapaViewController.swift */,
 				CD078AB82451A239009CF358 /* AppDelegate.swift */,
 				CD078ABA2451A239009CF358 /* ViewController.swift */,
 				CD058A62245363E70009F6D7 /* inicioViewController.swift */,
