@@ -37,7 +37,6 @@ class MapaViewController: UIViewController {
         
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(action(gestureRecognize:)))
         MapView.addGestureRecognizer(tapGesture)
-        
     }
     
     //Funcion para comprobar los tipos autorizacion que debemos tener 
@@ -51,6 +50,7 @@ class MapaViewController: UIViewController {
         }
     }
     
+    
     private func setUpLocationManager(){
         //Indicamos que el delegate es el mismo
         locationManager.delegate = self
@@ -58,6 +58,9 @@ class MapaViewController: UIViewController {
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
     }
     
+    
+    
+    //Funcion que comprueba el esatado de la autorizacion del usuario
     private func checkLocationAuthorization(){
         //Compromos el estado de la autorizacion
         switch CLLocationManager.authorizationStatus(){
@@ -74,16 +77,16 @@ class MapaViewController: UIViewController {
             case.notDetermined:
                 locationManager.requestWhenInUseAuthorization()
             
-        //Cuando el usuario no puede cambiar los permisos
+            //Cuando el usuario no puede cambiar los permisos
             case.restricted:
                 break
         
             //Autoriza tambien cuando la App esta en segundo plano
             case.authorizedAlways:
                 break
-            
         }
     }
+    
     
     //Centramos el mapa en un radio determinado a partir de la localizacion de usuario
     private func centerViewOnUserLocation(){
@@ -93,27 +96,13 @@ class MapaViewController: UIViewController {
         MapView.setRegion(region, animated: true)
         }
     }
-    
-    
-    private func anotacion(gestureRecognize: UIGestureRecognizer){
-        
-        self.MapView.removeAnnotations(MapView.annotations)
-        
-        let touchpoint = gestureRecognize.location(in: MapView)
-        let newCoords = MapView.convert(touchpoint, toCoordinateFrom: MapView)
-        let annotation = MKPointAnnotation()
-        
-        annotation.coordinate = newCoords
-        
-        MapView.addAnnotation(annotation)
-    }
-    
-
 
 }
 
+// -----------------------------------------------------------------------------------------------------------------------
+
 //Utilizamos este extension para declarar el delegate de nuestro mapa
-extension MapaViewController: CLLocationManagerDelegate{
+extension MapaViewController: CLLocationManagerDelegate,MKMapViewDelegate{
     
     //func mapViewWillStartLoadingMap(_ mapView: MKMapView) {
     //    print("renderizando....")
@@ -125,42 +114,21 @@ extension MapaViewController: CLLocationManagerDelegate{
     
     
     @objc func action(gestureRecognize: UIGestureRecognizer){
+        
+        //Si existe algun pin en la pantalla, que lo elimine
+        self.MapView.removeAnnotations(MapView.annotations)
+        
+        //Guardamos en esta varialble la localizacion del punto que marcamos en el mapa
         let touchpoint = gestureRecognize.location(in: MapView)
+        //Accedemos a las coordenadas de este punto
         let newCoords = MapView.convert(touchpoint, toCoordinateFrom: MapView)
+        //Creamos una nueva anotacion de tipo MKPointAnnotation
         let annotation = MKPointAnnotation()
         
+        //Le asignamos a esa anotacion las coordenadas del punto marcado en el mapa
         annotation.coordinate = newCoords
         
+        //Añadimos dicha anotacion a nuestro mapa
         MapView.addAnnotation(annotation)
     }
-}
-
-extension MapaViewController: MKMapViewDelegate{
-
-func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
-
-        //Si la ubicacion del pin es la del usuario, no devolvemos nada
-        if annotation is MKUserLocation{
-            return nil
-        }
-        let pin = MKPinAnnotationView(annotation: annotation, reuseIdentifier: "pin")
-        
-        
-        let annotationID = "AnnotationID"
-        var annotationView : MKAnnotationView?
-
-        if let dequeuedAnnotationView = mapView.dequeueReusableAnnotationView(withIdentifier: annotationID){
-            annotationView = dequeuedAnnotationView
-            annotationView?.annotation = annotation
-        }else{
-            annotationView = MKAnnotationView(annotation: annotation, reuseIdentifier: annotationID)
-        }
-
-            if let annotationView = annotationView{
-            annotationView.canShowCallout = true
-            annotationView.image = UIImage(named: "pin")
-
-            }
-        return pin
-        }
 }
