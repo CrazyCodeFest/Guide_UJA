@@ -20,14 +20,17 @@ class MapaViewController: UIViewController {
         super.viewDidLoad()
 
         //Damos una localizacion con la longitud y latitud
-        let localizacion = CLLocation(latitude: 37.7874, longitude: -3.7769)
+        //let localizacion = CLLocation(latitude: 37.7874, longitude: -3.7769)
         //La distancia en radio que queremos visualizar
-        let radio: CLLocationDistance = 2000.0
+        //let radio: CLLocationDistance = 2000.0
         //Creamos una region con los datos anteriores
-        let region = MKCoordinateRegionMakeWithDistance(localizacion.coordinate, radio, radio)
+        //let region = MKCoordinateRegionMakeWithDistance(localizacion.coordinate, radio, radio)
         
         //A nuestro MapView le damos esa region
-        MapView.setRegion(region, animated: true)
+        //MapView.setRegion(region, animated: true)
+        
+        //Llamamos a la funcion para comprobar permisos y si es adecuado, mostrar la localizacion
+        checkLocationAuthorization()
         
         //Indicamos que el delegate es el mismo
         MapView.delegate = self
@@ -57,6 +60,8 @@ class MapaViewController: UIViewController {
         
             //Autoriza solo para cuando la App se esta utilizando
             case.authorizedWhenInUse:
+                MapView.showsUserLocation = true
+                centerViewOnUserLocation()
                 break
             //No autoriza a utilizar su ubicacion. Mostrar alerta indicando que hacer para dar permiso
             case.denied:
@@ -75,6 +80,15 @@ class MapaViewController: UIViewController {
             
         }
     }
+    
+    //Centramos el mapa en un radio determinado a partir de la localizacion de usuario
+    private func centerViewOnUserLocation(){
+        
+        if let localizacion = locationManager.location?.coordinate{
+            let region = MKCoordinateRegionMakeWithDistance(localizacion, 1000,1000)
+        MapView.setRegion(region, animated: true)
+        }
+    }
 
 
 }
@@ -82,11 +96,11 @@ class MapaViewController: UIViewController {
 //Utilizamos este extension para declarar el delegate de nuestro mapa
 extension MapaViewController: MKMapViewDelegate,CLLocationManagerDelegate{
     
-    func mapViewWillStartLoadingMap(_ mapView: MKMapView) {
-        print("renderizando....")
-    }
+    //func mapViewWillStartLoadingMap(_ mapView: MKMapView) {
+    //    print("renderizando....")
+    //}
     
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
-        <#code#>
+        
     }
 }
