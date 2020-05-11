@@ -34,6 +34,10 @@ class MapaViewController: UIViewController {
         
         //Indicamos que el delegate es el mismo
         MapView.delegate = self
+        
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(action(gestureRecognize:)))
+        MapView.addGestureRecognizer(tapGesture)
+        
     }
     
     //Funcion para comprobar los tipos autorizacion que debemos tener 
@@ -89,18 +93,74 @@ class MapaViewController: UIViewController {
         MapView.setRegion(region, animated: true)
         }
     }
+    
+    
+    private func anotacion(gestureRecognize: UIGestureRecognizer){
+        
+        self.MapView.removeAnnotations(MapView.annotations)
+        
+        let touchpoint = gestureRecognize.location(in: MapView)
+        let newCoords = MapView.convert(touchpoint, toCoordinateFrom: MapView)
+        let annotation = MKPointAnnotation()
+        
+        annotation.coordinate = newCoords
+        
+        MapView.addAnnotation(annotation)
+    }
+    
 
 
 }
 
 //Utilizamos este extension para declarar el delegate de nuestro mapa
-extension MapaViewController: MKMapViewDelegate,CLLocationManagerDelegate{
+extension MapaViewController: CLLocationManagerDelegate{
     
     //func mapViewWillStartLoadingMap(_ mapView: MKMapView) {
     //    print("renderizando....")
     //}
     
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
-        
+    
     }
+    
+    
+    @objc func action(gestureRecognize: UIGestureRecognizer){
+        let touchpoint = gestureRecognize.location(in: MapView)
+        let newCoords = MapView.convert(touchpoint, toCoordinateFrom: MapView)
+        let annotation = MKPointAnnotation()
+        
+        annotation.coordinate = newCoords
+        
+        MapView.addAnnotation(annotation)
+    }
+}
+
+extension MapaViewController: MKMapViewDelegate{
+
+func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+
+        //Si la ubicacion del pin es la del usuario, no devolvemos nada
+        if annotation is MKUserLocation{
+            return nil
+        }
+        let pin = MKPinAnnotationView(annotation: annotation, reuseIdentifier: "pin")
+        
+        
+        let annotationID = "AnnotationID"
+        var annotationView : MKAnnotationView?
+
+        if let dequeuedAnnotationView = mapView.dequeueReusableAnnotationView(withIdentifier: annotationID){
+            annotationView = dequeuedAnnotationView
+            annotationView?.annotation = annotation
+        }else{
+            annotationView = MKAnnotationView(annotation: annotation, reuseIdentifier: annotationID)
+        }
+
+            if let annotationView = annotationView{
+            annotationView.canShowCallout = true
+            annotationView.image = UIImage(named: "pin")
+
+            }
+        return pin
+        }
 }
