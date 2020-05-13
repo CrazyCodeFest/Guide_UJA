@@ -45,6 +45,7 @@ class EdificiosCollectionViewController: UICollectionViewController, UICollectio
                 detail.sentData1 = item["Name"]
                 detail.sentData2 = item["Image"]
                 detail.sentData3 = item["Description"]
+                detail.sentData4 = item["LongName"]
             }
         }
     }
@@ -71,6 +72,7 @@ class EdificiosCollectionViewController: UICollectionViewController, UICollectio
         //Asignamos a la celda la imagen de su edificio correspondiente
         let item = self.items[indexPath.row]
         cell.cellImageView.image = UIImage(named: item["Image"]!)
+        cell.EdifName.text = item["Name"]
     
         return cell
     }
@@ -81,6 +83,9 @@ class EdificiosCollectionViewController: UICollectionViewController, UICollectio
         var widthCell = 0
         var heightCell = 0
         
+      
+      
+       
         //iphone x
         if screanSize.width == 375 {
             widthCell = 172
@@ -94,7 +99,7 @@ class EdificiosCollectionViewController: UICollectionViewController, UICollectio
             heightCell = 125
         }
         //iphone 5,5s,5c,SE
-        if screanSize.width == 320{
+       if screanSize.width == 320{
             widthCell = 144
             heightCell = 125
         }

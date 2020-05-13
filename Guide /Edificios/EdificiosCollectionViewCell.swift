@@ -10,5 +10,6 @@ import UIKit
 
 class EdificiosCollectionViewCell: UICollectionViewCell {
     
+    @IBOutlet weak var EdifName: UILabel!
     @IBOutlet weak var cellImageView: UIImageView!
 }

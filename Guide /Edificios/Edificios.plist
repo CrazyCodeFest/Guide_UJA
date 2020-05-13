@@ -4,11 +4,123 @@
 <array>
 	<dict>
 		<key>Name</key>
+		<string>Edificio A1</string>
+		<key>Image</key>
+		<string>A1</string>
+		<key>Description</key>
+		<string>Superficie útil / construida: 2.082,14 m2 / 2.476,28 m                                                  Fecha de terminación de la obras: 2009              </string>
+		<key>LongName</key>
+		<string>Producción y Experimentación animal</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>Edificio A2</string>
+		<key>Image</key>
+		<string>A2</string>
+		<key>Description</key>
+		<string>Planta Cuarta:
+* Laboratorios de Química Inorgánica y Orgánica
+* Laboratorios de Fisioterapia
+* Laboratorios de Enfermería
+* Laboratorios de CICT y Dirección SCAI
+
+Planta Tercera:
+* Laboratorio de Geología
+* Laboratorios de Ciencias Morfológicas
+* Laboratorios de Terrritorios y Patrimonio Histórico
+* Laboratorios de Didácticas de las Ciencias
+* Laboratorios de CICT
+
+Planta Segunda:
+* Laboratorio de Química Física y Analítica
+* Laboratorio de Microbiología
+* Laboratorios de Biología Experimental
+* Laboratorios de Fisiología
+* Laboratorios de CICT
+
+Planta Primera:
+* Laboratorios de Ingeniería Química
+* Laboratorios de Biología Animal, Vegetal y Ecología
+* Laboratorio de Psicología
+* Laboratorios y Dirección Técnica CICT
+
+Planta Baja:
+* Laboratorios de Ingeniería Química
+* Laboratorios de Psicología Animal
+* Laboratorios de CICT
+* Conserjería</string>
+		<key>LongName</key>
+		<string>Laboratorios Docentes y CICT</string>
+	</dict>
+	<dict>
+		<key>Name</key>
 		<string>Edificio A3</string>
 		<key>Image</key>
 		<string>A3</string>
 		<key>Description</key>
-		<string>Prueba de descripción</string>
+		<string>Planta Cubierta:
+* Observatorio Astronómico
+
+Planta Cuarta:
+* Departamento de Ingeniería Electrónica
+* Departamento de Física
+* Laboratorios de Electrónica Analítica
+* Laboratorio de Electrónica Digital
+* Laboratorio de Tecnología Electrónica
+* Laboratorio de Control de Procesos
+* Laboratorio de Electrónica Avanzada
+* Laboratorio de Automática y Robótica Industrial
+* Laboratorio de Física
+* Laboratorio de Física General 3
+* Laboratorio de Física de la Tierra
+
+Planta Tercera:
+* Departamento de Ingeniería Cartográfica, Geodesia y Fotogrametría
+* Laboratorio de Cartografía y Teledetección
+* Laboratorio de Estereoscopios
+* Laboratorio de Fotogrametría Analógica
+* Laboratorio de Fotogrametría Analítica
+* Laboratorio de Fotogrametría Digital
+* Laboratorio de Calibración y Medidas Industriales
+* Laboratorio de Física General 1, 2
+* Laboratorio de Mecánica de los Medios Continuos y Teoría de Estructuras
+* Laboratorio de Física Moderna y Experimental
+* Departamento de Psicología (Trabajo Social y Servicios Sociales)
+
+Planta Segunda:
+* Departamento de Ingeniería Gráfica, Diseño y Proyectos
+* Departamento de Ingeniería Eléctrica
+* Laboratorio de Máquinas Eléctricas
+* Laboratorio de Instalaciones
+* Laboratorio de Teoría de Circuitos
+* Laboratorio de Iluminación y Domótica
+* Laboratorio de CAD-1 y CAD-2
+* Laboratorio de Diseño Industrial
+
+Planta Primera:
+* Departamento de Informática
+* Laboratorio de Informática 1, 2 y 3
+* Sala de Grados
+* Sala de Juntas
+* Dirección de la Escuela Polítecnica Superior
+
+Planta Baja:
+* Departamento de Ingeniería Mecánica y Minera
+* Departamento de Física
+* Laboratorio de Ingeniería de Mecánica de Fluidos
+* Laboratorio de Máquinas y Motores Térmicos
+* Laboratorio de Ingeniería Mecánica 
+* Laboratorio de Metología y Metrotecnia
+* Laboratorio de Taller Mecánico
+* Laboratorio de Alta Tensión
+* Conserjería
+* Junta de alumnos EPSJ
+
+Planta Sótano:
+* Laboratorio de Metalografía
+* Laboratorio de Ensayo Mecánica</string>
+		<key>LongName</key>
+		<string>Ingeniería y Tecnología</string>
 	</dict>
 	<dict>
 		<key>Name</key>
@@ -16,239 +128,423 @@
 		<key>Image</key>
 		<string>A4</string>
 		<key>Description</key>
-		<string>Prueba de descripción</string>
+		<string>Planta Tercera:
+* Aulas 31 a 39
+* Aulas Informática I-31 a I-34
+
+Planta Segunda:
+* Aulas 20 a 29
+* Aulas Informática I-21 a I-24
+
+Planta Primera:
+* Aulas 11 a 19
+* Aulas Informática I-11 a I-14
+
+Planta Baja:
+* Aulas 1 a 7
+* Aulas Informática I-1 a I-4
+* Conserjería
+* Reprografía</string>
+		<key>LongName</key>
+		<string>Aulario Cesáreo Rodriguez Aguilera</string>
 	</dict>
 	<dict>
 		<key>Name</key>
-		<string>Edificio A3</string>
+		<string>Edificio B1</string>
 		<key>Image</key>
-		<string>A3</string>
+		<string>B1</string>
 		<key>Description</key>
-		<string>Prueba de descripción</string>
+		<string>Planta Segunda:
+* Rectorado 
+* Gabinete del Rector
+
+Planta Primera:
+* Secretaría General
+* Gerencia
+* Vicerrectorado de Tecnologías de la Información y la Comunicación e Infraestructuras 
+* Vicerrectorado de Enseñanzas de Grado, Postgrado y Formación Permanente
+* Vicerrectorado de Estudiantes
+* Vicerrectorado de Internacionalización
+* Vicerrectorado de Proyección de la Cultura, Deportes y Responsabilidad Social
+* Servicio de Personal y Organización Docente
+* Unidad técnica: Servicio de Obras, Servicio de Mantenimiento y Vigilancia de las Instalaciones
+* Servicio de Planificación y Evaluación
+
+Planta Baja:
+* Vicerrectorado de Investigación
+* Vicerrectorado de Profesorado y Ordenación Académica
+* Vicerrectorado de Relaciones con la Sociedad e Inserción Laboral
+* Servicio Jurídico
+* Servicio de Investigación
+* Oficina de Transferencia de Resultados de la Investigación
+* Área de Prevención de Riesgos Laborales
+* Servicio de Información y Asuntos Generales
+* Información 
+* Registro
+* Tratamiento de la Correspondencia
+* Sala de juntas
+* Conserjería
+* Oficina de Objetos Perdidos</string>
+		<key>LongName</key>
+		<string>Rectorado</string>
 	</dict>
 	<dict>
 		<key>Name</key>
-		<string>Edificio A3</string>
+		<string>Edificio B2</string>
 		<key>Image</key>
-		<string>A3</string>
+		<string>B2</string>
 		<key>Description</key>
-		<string>Prueba de descripción</string>
+		<string>Planta tercera:
+* Hemeroteca
+* Salas de Investigadores
+* Cabinas de Audiovisuales
+* Aula Aranzadi
+* Sala de Proyección
+
+Planta segunda:
+Humanidades, Arte, Filología, Geografía e Historia
+* Préstamo
+* Salas de Trabajo en Grupo e Investigadores
+* Aula de Formación
+* Biblioteca de Gestión Universitaria
+* Espacio Juan Montiel
+* Acceso al Documento y Préstamo Interbibliotecario
+* Servicio de Publicaciones
+
+Planta primera:
+Ciencias Experimentales, Ingeniería y Tecnología, Empresa, Informática
+* Préstamo
+* Salas de Trabajo en Grupo e Investigadores
+* Fondo Antiguo y Proyectos
+* Espacio Cesáreo Rodríguez Aguilera
+* Dirección
+* Subdirección y Automatización
+* Normalización y Proceso Técnico
+* Adquisiciones
+* Administración
+
+Planta Baja:
+Filosofía, Piscología, Religión, Ciencias Sociales, Economía, Derecho, Educación
+* Préstamo
+* Salas de Trabajo en Grupo e Investigadores
+* Archivo General</string>
+		<key>LongName</key>
+		<string>Biblioteca</string>
 	</dict>
 	<dict>
 		<key>Name</key>
-		<string>Edificio A3</string>
+		<string>Edificio B3</string>
 		<key>Image</key>
-		<string>A3</string>
+		<string>B3</string>
 		<key>Description</key>
-		<string>Prueba de descripción</string>
+		<string>Planta cubierta
+* Laboratorio de Ingeniería Química
+
+Planta cuarta
+* Laboratorio de Ingeniería Química, Ambiental y de los Materiales
+* Departamento de Química Inorgánica y Orgánica
+* Departamento de Biología Animal, Biología Vegetal y Ecología
+
+Planta tercera
+* Departamento de Biología Experimental
+    * Departamento de Geología
+
+Planta segunda
+* Departamento de Ciencias de la Salud
+* Departamento de Enfermería
+
+Planta primera
+* Departamento de Química, Física y Analítica
+* Departamento de Biología Animal, Biología Vegetal y Ecología
+
+Planta baja
+* Departamento de Matemáticas
+* Departamento de Estadística e Investigación Operativa
+* Sala de juntas
+* Conserjería</string>
+		<key>LongName</key>
+		<string>Ciencias Experimentales y de la Salud</string>
 	</dict>
 	<dict>
 		<key>Name</key>
-		<string>Edificio A3</string>
+		<string>Edificio B4</string>
 		<key>Image</key>
-		<string>A3</string>
+		<string>B4</string>
 		<key>Description</key>
-		<string>Prueba de descripción</string>
+		<string>Planta segunda:
+* Aulas 20 a 29 y E3 - E4
+
+Planta Primera:
+* Aulas 10 a 18 y E1 - E2
+* Aula Multimedia I y II
+
+Planta Baja:
+* Aulas 1 a 8
+* Aula de Música
+* Reprografía</string>
+		<key>LongName</key>
+		<string>Aulario Flores de Lemus</string>
 	</dict>
 	<dict>
 		<key>Name</key>
-		<string>Edificio A3</string>
+		<string>Edificio B5</string>
 		<key>Image</key>
-		<string>A3</string>
+		<string>B5</string>
 		<key>Description</key>
-		<string>Prueba de descripción</string>
+		<string>Planta segunda:
+* Aulas (de la 9 a la 16)
+* Laboratorio de Ciencias de la Salud
+* Laboratorio de Enfermería
+
+Planta primera:
+* Aulas (de la 1 a la 8)
+* Defensor Universitario
+
+Planta baja:
+* Secretaría del Campus de las Lagunillas
+* Conserjería</string>
+		<key>LongName</key>
+		<string>Aulario Coello de Portugal y Quesada</string>
 	</dict>
 	<dict>
 		<key>Name</key>
-		<string>Edificio A3</string>
+		<string>Edificio C1</string>
 		<key>Image</key>
-		<string>A3</string>
+		<string>C1</string>
 		<key>Description</key>
-		<string>Prueba de descripción</string>
+		<string>Planta primera:
+* Facultad de Ciencias Experimentales (Decanato)
+* Facultad de Trabajo Social
+* Facultad de Ciencias de la Salud
+* Negociados de Dirección y Gestión de Centros
+
+Planta baja:
+* Aula Magna
+* Unidad de Audiovisuales Multimedia
+* Sala de Grados 1
+* Sala de Grados 2
+* Conserjería</string>
+		<key>LongName</key>
+		<string>Aula Magna</string>
 	</dict>
 	<dict>
 		<key>Name</key>
-		<string>Edificio A3</string>
+		<string>Edificio C2</string>
 		<key>Image</key>
-		<string>A3</string>
+		<string>C2</string>
 		<key>Description</key>
-		<string>Prueba de descripción</string>
+		<string>Planta cuarta:
+* Uniradio Jaén
+
+Planta tercera
+* Asociaciones de Estudiantes
+* Consejo de Estudiantes
+
+Planta segunda:
+* Tuna Universitaria
+* Asociaciones de Estudiantes
+
+Planta primera:
+Servicio de Atención y Ayudas al Estudiante
+* Sección de Ayudas al Estudio (Becas)
+* Sección de Relaciones Internacionales
+* Sección de Asistencia al Estudiante (Practicas de Empresa)
+* Servicio de Orientación Profesional
+* Servicio de Apoyo a Emprendedores
+* Oficina de Voluntariado
+* Oficina de Atención a antiguos Alumnos y Amigos de la UJA
+
+Planta baja:
+Área Económica y Patrimonial
+* Servicio de Asuntos Económicos
+* Servicio de Contabilidad y Presupuestos
+* Servicio de Contratación y Patrimonio
+Servicio de Control Interno
+
+Planta semisótano:
+* Servicio de Mantenimiento</string>
+		<key>LongName</key>
+		<string>Bachiller Pérez de Moya</string>
 	</dict>
 	<dict>
 		<key>Name</key>
-		<string>Edificio A3</string>
+		<string>Edificio C3</string>
 		<key>Image</key>
-		<string>A3</string>
+		<string>C3</string>
 		<key>Description</key>
-		<string>Prueba de descripción</string>
+		<string>Planta segunda:
+* Aulas de la 21 a la 26
+* Seminarios 21 y 22
+* Vestuarios
+
+Planta primera:
+* Aulas de la 11 a la 16
+* Seminario 11 a 13
+* Laboratorio de Psicología
+
+Planta Baja:
+* Aulas de la 1 a la 6
+* Seminario 1
+* Conserjería
+* Reprografía</string>
+		<key>LongName</key>
+		<string>Aulario Juan de Mata Carriazo</string>
 	</dict>
 	<dict>
 		<key>Name</key>
-		<string>Edificio A3</string>
+		<string>Edificio C4</string>
 		<key>Image</key>
-		<string>A3</string>
+		<string>C4</string>
 		<key>Description</key>
-		<string>Prueba de descripción</string>
+		<string>Datos relativos al proyecto inicial:
+* Superficie útil: 4.920,09 m2 / 5.442,10 m2
+
+Datos relativos a la construcción:
+* Fecha de terminación de la obras: 2010</string>
+		<key>LongName</key>
+		<string>Usos Múltiples Antonio Machado</string>
 	</dict>
 	<dict>
 		<key>Name</key>
-		<string>Edificio A3</string>
+		<string>Edificio C5</string>
 		<key>Image</key>
-		<string>A3</string>
+		<string>C5</string>
 		<key>Description</key>
-		<string>Prueba de descripción</string>
+		<string>Planta Segunda:
+* Departamento de Pedagogía
+* Departamento de Patrimonio Histórico
+Planta Primera
+* Departamento de Psicología
+
+Planta Baja:
+* Sala de Juntas
+* Laboratorio de Psicología
+* Laboratorio de Pedagogía
+* Conserjería</string>
+		<key>LongName</key>
+		<string>Humanidades y ciencias de la educación</string>
 	</dict>
 	<dict>
 		<key>Name</key>
-		<string>Edificio A3</string>
+		<string>Edificio C6</string>
 		<key>Image</key>
-		<string>A3</string>
+		<string>C6</string>
 		<key>Description</key>
-		<string>Prueba de descripción</string>
+		<string>
+Planta Segunda:
+* Instituto Universitario de Investigación en Argueología Ibérica
+Dirección, Sala de Juntas, Biblioteca y Sala de Becarios.
+* Centro de Estudios Avanzados de Lenguas Modernas
+Dirección, Sala de Recursos y Sala de Profesores
+* Centro de Estuios Avanzados en Energía y Medio Ambiente
+Dirección, Sala de Juntas y Biblioteca
+* Centro de Estudios Avanzados en Tecnologías de la Información y Comunicación 
+Dirección, Sala de Juntas y Bibliteca 
+* Centro de Estudios Avanzados en Ciencias de la Tierra
+Dirección, Sala de Juntas y Biblioteca
+
+Planta Primera:
+* Instituto Universitario de Investigación en Arqueología Ibérica
+Sala de Juntas y Despachos
+* Centro de Estudios Avanzados de Lenguas Modernas
+Seminarios
+* Centro de Estudios Avanzados en Energía y Medio Ambiente
+Despachos y Seminarios
+* Centro de Estudios Avanzados en Tecnologías de la Información y Comunicación
+Despachos y Seminarios
+* Centro de Estudios Avanzados en Ciencias de la Tierra
+Despachos
+
+Planta Baja:
+* Instituto Universitario de Investigación en Arqueología Ibérica
+Ágora, Laborarios y Almacén
+* Centro de Estudios Avanzados de Lenguas Modernas
+Seminarios
+* Centro de Estudios Avanzados en Energía y Medio Ambiente
+Laboratorios
+* Centro de Estudios Avanzados en Tecnologías de la Información y Comunicación
+Seminario
+* Conserjería</string>
+		<key>LongName</key>
+		<string>Centros de investigación</string>
 	</dict>
 	<dict>
 		<key>Name</key>
-		<string>Edificio A3</string>
+		<string>Edificio D1</string>
 		<key>Image</key>
-		<string>A3</string>
+		<string>D1</string>
 		<key>Description</key>
-		<string>Prueba de descripción</string>
+		<string>Planta Segunda
+* Vicerrectorado Tecnologías de la Información y la Comunicación e Infraestructuras
+
+Planta Primera:
+* Sala de Juntas
+* Sala de Grados
+* Sucursal Bancaria
+
+Planta Baja:
+* Cafetería
+* Servicio de Informática (Oficina de Atención al Usuario)
+* Sala de Exposiciones
+* Conserjería
+
+Planta Semisótano:
+* Servicio de Informática</string>
+		<key>LongName</key>
+		<string>Zabaleta</string>
 	</dict>
 	<dict>
 		<key>Name</key>
-		<string>Edificio A3</string>
+		<string>Edificio D2</string>
 		<key>Image</key>
-		<string>A3</string>
+		<string>D2</string>
 		<key>Description</key>
-		<string>Prueba de descripción</string>
+		<string>
+Planta cuarta:
+* Seminarios
+
+Planta tercera:
+* Departamento de Didáctica de las Ciencias
+* Departamento de Antropología, Geografía e Historia
+
+Planta segunda:
+* Departamento de Filología Inglesa
+* Departamento de Lenguas y Culturas Mediterráneas
+
+Planta primera:
+* Departamento de Expresión Musical, Plástica y Corporal
+* Departamento de Lenguas y Culturas Mediterráneas
+
+Planta baja:
+* Departamento de Filología Española
+* Decanato de la Facultad 
+* Sala de Juntas</string>
+		<key>LongName</key>
+		<string>Humanidades y ciencias de la educación (I)</string>
 	</dict>
 	<dict>
 		<key>Name</key>
-		<string>Edificio A3</string>
+		<string>Edificio D3</string>
 		<key>Image</key>
-		<string>A3</string>
+		<string>D3</string>
 		<key>Description</key>
-		<string>Prueba de descripción</string>
-	</dict>
-	<dict>
-		<key>Name</key>
-		<string>Edificio A3</string>
-		<key>Image</key>
-		<string>A3</string>
-		<key>Description</key>
-		<string>Prueba de descripción</string>
-	</dict>
-	<dict>
-		<key>Name</key>
-		<string>Edificio A3</string>
-		<key>Image</key>
-		<string>A3</string>
-		<key>Description</key>
-		<string>Prueba de descripción</string>
-	</dict>
-	<dict>
-		<key>Name</key>
-		<string>Edificio A3</string>
-		<key>Image</key>
-		<string>A3</string>
-		<key>Description</key>
-		<string>Prueba de descripción</string>
-	</dict>
-	<dict>
-		<key>Name</key>
-		<string>Edificio A3</string>
-		<key>Image</key>
-		<string>A3</string>
-		<key>Description</key>
-		<string>Prueba de descripción</string>
-	</dict>
-	<dict>
-		<key>Name</key>
-		<string>Edificio A3</string>
-		<key>Image</key>
-		<string>A3</string>
-		<key>Description</key>
-		<string>Prueba de descripción</string>
-	</dict>
-	<dict>
-		<key>Name</key>
-		<string>Edificio A3</string>
-		<key>Image</key>
-		<string>A3</string>
-		<key>Description</key>
-		<string>Prueba de descripción</string>
-	</dict>
-	<dict>
-		<key>Name</key>
-		<string>Edificio A3</string>
-		<key>Image</key>
-		<string>A3</string>
-		<key>Description</key>
-		<string>Prueba de descripción</string>
-	</dict>
-	<dict>
-		<key>Name</key>
-		<string>Edificio A3</string>
-		<key>Image</key>
-		<string>A3</string>
-		<key>Description</key>
-		<string>Prueba de descripción</string>
-	</dict>
-	<dict>
-		<key>Name</key>
-		<string>Edificio A3</string>
-		<key>Image</key>
-		<string>A3</string>
-		<key>Description</key>
-		<string>Prueba de descripción</string>
-	</dict>
-	<dict>
-		<key>Name</key>
-		<string>Edificio A3</string>
-		<key>Image</key>
-		<string>A3</string>
-		<key>Description</key>
-		<string>Prueba de descripción</string>
-	</dict>
-	<dict>
-		<key>Name</key>
-		<string>Edificio A3</string>
-		<key>Image</key>
-		<string>A3</string>
-		<key>Description</key>
-		<string>Prueba de descripción</string>
-	</dict>
-	<dict>
-		<key>Name</key>
-		<string>Edificio A3</string>
-		<key>Image</key>
-		<string>A3</string>
-		<key>Description</key>
-		<string>Prueba Descripción</string>
-	</dict>
-	<dict>
-		<key>Name</key>
-		<string>Edificio A3</string>
-		<key>Image</key>
-		<string>A3</string>
-		<key>Description</key>
-		<string>Prueba Descripción</string>
-	</dict>
-	<dict>
-		<key>Name</key>
-		<string>Edificio A3</string>
-		<key>Image</key>
-		<string>A3</string>
-		<key>Description</key>
-		<string>Prueba Descripción</string>
-	</dict>
-	<dict>
-		<key>Name</key>
-		<string>Edificio A3</string>
-		<key>Image</key>
-		<string>A3</string>
-		<key>Description</key>
-		<string>Prueba Descripción</string>
+		<string>Planta segunda:
+* Departamento de Derecho Público y Común Europeo
+* Departamento de Derecho Público y Derecho Privado Especial
+* Departamento de Economía
+
+Planta primera:
+* Departamento de Derecho Penal, Filosofía del Derecho, Filosofía Moral y Filosofía
+* Departamentos de Administración de Empresas, Contabilidad y Sociología
+
+Planta baja:
+* Consejo Social
+* Decanato de la Facultad de Ciencias Sociales y Jurídicas
+* Departamento de Derecho Civil, Derecho Financiero y Tributario
+* Conserjería
+* Sala de Juntas</string>
+		<key>LongName</key>
+		<string>Ciencias Sociales y Jurídicas</string>
 	</dict>
 </array>
 </plist>

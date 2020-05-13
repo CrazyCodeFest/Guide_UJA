@@ -19,6 +19,7 @@ class DetailEdificiosViewController: UIViewController {
     var sentData1: String!
     var sentData2: String!
     var sentData3: String!
+    var sentData4: String!
     
     
     
@@ -29,7 +30,7 @@ class DetailEdificiosViewController: UIViewController {
         self.navigationItem.title = sentData1
 
         detailImageView.image = UIImage(named: sentData2)
-        detailTitle.text = sentData1
+        detailTitle.text = sentData4
         detailDescription.text = sentData3
     }
     
