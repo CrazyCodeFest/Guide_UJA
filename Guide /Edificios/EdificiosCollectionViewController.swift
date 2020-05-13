@@ -8,12 +8,15 @@
 
 import UIKit
 
+//variable que almacena el identificador de las celdas
 private let reuseIdentifier = "EdificiosCell"
 
 class EdificiosCollectionViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
     
+    
     var items = [[String:String]]()
     
+    //función encargada de cargar a partir de "Edificios.plist", que es donde se encuentra toda la información almacenada
     func loadPlist() -> [[String:String]]{
         
         let path = Bundle.main.path(forResource: "Edificios", ofType: "plist")
@@ -23,11 +26,6 @@ class EdificiosCollectionViewController: UICollectionViewController, UICollectio
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Do any additional setup after loading the view.
-        
         self.items = loadPlist()
         
     }
@@ -35,7 +33,7 @@ class EdificiosCollectionViewController: UICollectionViewController, UICollectio
     
     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
+   //función encargada de detectar que celda se ha pulsado y por tanto mandar su información al "DetailEdificiosViewController"
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "ShowDetail" {
             let detail = segue.destination as! DetailEdificiosViewController
@@ -43,7 +41,7 @@ class EdificiosCollectionViewController: UICollectionViewController, UICollectio
             if let indexPath = self.collectionView?.indexPath(for: sender as! UICollectionViewCell){
                 
                 let item = self.items[indexPath.row]
-                
+                //Manda a "DetailEdificiosViewController" los datos correspondientes a la celda seleccionada
                 detail.sentData1 = item["Name"]
                 detail.sentData2 = item["Image"]
                 detail.sentData3 = item["Description"]
@@ -55,13 +53,13 @@ class EdificiosCollectionViewController: UICollectionViewController, UICollectio
     // MARK: UICollectionViewDataSource
 
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
+
         return 1
     }
 
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of items
+
         return self.items.count
     }
 
@@ -70,14 +68,14 @@ class EdificiosCollectionViewController: UICollectionViewController, UICollectio
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! EdificiosCollectionViewCell
     
-        // Configure the cell
+        //Asignamos a la celda la imagen de su edificio correspondiente
         let item = self.items[indexPath.row]
         cell.cellImageView.image = UIImage(named: item["Image"]!)
     
         return cell
     }
 
-    
+    //Función encargada de ajustar el tamaño de las celdas del CollectionView, Para hacerlo compatible con los demas dispositivos
     override func size(forChildContentContainer container: UIContentContainer, withParentContainerSize parentSize: CGSize) -> CGSize {
         let screanSize : CGRect = UIScreen.main.bounds
         var widthCell = 0

@@ -23,7 +23,7 @@ class EditNoteViewController: UIViewController, UITextViewDelegate {
     var noteBody: String!
     
     
-    
+    //se encarga de inicializar el botón de guardar
     @IBAction func doneButtonTap(_ sender: Any) {
         
         self.bodyTextView.resignFirstResponder()
@@ -40,6 +40,7 @@ class EditNoteViewController: UIViewController, UITextViewDelegate {
         self.bodyTextView.becomeFirstResponder()
     }
     
+    
     override func viewWillDisappear(_ animated: Bool) {
         if self.editNoteDelegate != nil {
             
@@ -48,12 +49,12 @@ class EditNoteViewController: UIViewController, UITextViewDelegate {
                     }
     }
     
-    
+    //Si el texto ha sido modificado se habilita el botón de guardar
     func textViewDidBeginEditing(_ textView: UITextView) {
         self.doneButton.isEnabled = true
     }
     
-
+    //función encargada de obtener el nuevo título dado por el usuario al modificar la nota
     func getNotesTitle() -> String  {
         
         let components = self.bodyTextView.text.components(separatedBy: "\n")

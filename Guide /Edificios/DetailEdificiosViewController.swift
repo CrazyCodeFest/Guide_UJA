@@ -15,6 +15,7 @@ class DetailEdificiosViewController: UIViewController {
     @IBOutlet weak var detailDescription: UITextView!
     
     
+    //Variables a las que se le enviará la información para que aparezca en pantalla
     var sentData1: String!
     var sentData2: String!
     var sentData3: String!
@@ -24,6 +25,7 @@ class DetailEdificiosViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //Se asigna a la vista detalle los valores de la celda seleccionada
         self.navigationItem.title = sentData1
 
         detailImageView.image = UIImage(named: sentData2)
