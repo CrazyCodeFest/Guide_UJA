@@ -9,26 +9,6 @@
 import UIKit
 import MapKit
 
-////Clase para crear una anotacion
-//final class anotacion: NSObject,MKAnnotation{
-//    var coordinate: CLLocationCoordinate2D
-//
-//
-////    //Coordenadas de una anotacion
-////    var coordenadas: CLLocationCoordinate2D
-////    //Titulo de una anotacion
-////    var titulo: String
-////
-////
-////
-////    init(coordenadas: CLLocationCoordinate2D, titulo: String){
-////        self.coordenadas = coordenadas
-////        self.titulo = titulo
-////
-////        super.init()
-////    }
-//}
-
 class MapaViewController: UIViewController {
 
     //Objeto que utilizamos para empezar o parar el envio de evento de locacizacion
@@ -44,8 +24,18 @@ class MapaViewController: UIViewController {
         //Cuando se ha cargado la vista, configuramos los servicios de localizacion
         configureLocationServices()
         crearAnotaciones()
-        
-        
+    }
+    
+    //Cuando la vista del mapa desaparece, dejamos de actualizar la localizacion
+    //para evitar la venta de alerta de que no estamos cerca de la UJA
+    override func viewDidDisappear(_ animated: Bool) {
+        locationManager.stopUpdatingLocation()
+    }
+    
+    //Cuando volvemos a la vista del mapa desde otra vista, vuelve a activarse la actualizacion
+    //de la localizacion
+    override func viewDidAppear(_ animated: Bool) {
+        locationManager.startUpdatingLocation()
     }
     
     private func configureLocationServices(){
@@ -242,8 +232,4 @@ extension MapaViewController: CLLocationManagerDelegate{
             beginLocationUpdates(locationManager: manager)
         }
     }
-}
-
-extension MapaViewController: MKMapViewDelegate{
-    
 }
