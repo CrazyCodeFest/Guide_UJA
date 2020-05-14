@@ -177,23 +177,26 @@ class MapaViewController: UIViewController {
     }
     
     
+    //Funcion que compara la posicion actual con una dada que corresponde al centro del Campus de la UJA
     private func aletarDistancia(currentLocation:CLLocationCoordinate2D)-> Double {
         
         let centroCampus = CLLocationCoordinate2D(latitude: 37.7884,longitude: -3.7773)
         
+        //Combersion de CLLocationCoordinates2D a MKMapPoint
         let point1: MKMapPoint = MKMapPoint(centroCampus);
         let point2: MKMapPoint = MKMapPoint(currentLocation);
         
         let distancia: CLLocationDistance = point1.distance(to:point2)
         
-        
+        //Depurar
         print(distancia)
         
         return distancia
     }
     
+    //Alerta si no estas dentro del Campus de la UJA para el mapa
     func showAlert() {
-        let alertController = UIAlertController(title: "Aleta", message:
+        let alertController = UIAlertController(title: "Alerta", message:
             "No estas en el Campus de la UJA. Desplazate hacia allí para utilizar el mapa", preferredStyle: .alert)
         alertController.addAction(UIAlertAction(title: "Aceptar", style: .default))
         
@@ -219,6 +222,7 @@ extension MapaViewController: CLLocationManagerDelegate{
         //Llamamos a la funcion para hacer zoom
         zoomToLatestLocation(with: latestLocation.coordinate)
         
+        //Si la distancia entre el Campus y nuestra prosicion actal es mayor de 500m, muestra la alerta
         if(aletarDistancia(currentLocation: manager.location!.coordinate) > 500.0){
             showAlert()
         }
