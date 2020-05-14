@@ -45,10 +45,12 @@ class MapaViewController: UIViewController {
         configureLocationServices()
         crearAnotaciones()
         
+        
     }
     
     private func configureLocationServices(){
         
+        //El delegate de locationManager lo encontramos en este doc
         locationManager.delegate = self
         
         //Guardamos si tenemos autorizacion del usuario para usar los servicios de localizacion
@@ -182,9 +184,33 @@ class MapaViewController: UIViewController {
         mapView.addAnnotation(D1)
         mapView.addAnnotation(D2)
         mapView.addAnnotation(D3)
-        
-        
     }
+    
+    
+    private func aletarDistancia(currentLocation:CLLocationCoordinate2D)-> Double {
+        
+        let centroCampus = CLLocationCoordinate2D(latitude: 37.7884,longitude: -3.7773)
+        
+        let point1: MKMapPoint = MKMapPoint(centroCampus);
+        let point2: MKMapPoint = MKMapPoint(currentLocation);
+        
+        let distancia: CLLocationDistance = point1.distance(to:point2)
+        
+        
+        print(distancia)
+        
+        return distancia
+    }
+    
+    func showAlert() {
+        let alertController = UIAlertController(title: "Aleta", message:
+            "No estas en el Campus de la UJA. Desplazate hacia allí para utilizar el mapa", preferredStyle: .alert)
+        alertController.addAction(UIAlertAction(title: "Aceptar", style: .default))
+        
+        self.present(alertController, animated: true, completion: nil)
+    }
+    
+    
 }
 
 
@@ -202,6 +228,10 @@ extension MapaViewController: CLLocationManagerDelegate{
         currentCoordinate = latestLocation.coordinate
         //Llamamos a la funcion para hacer zoom
         zoomToLatestLocation(with: latestLocation.coordinate)
+        
+        if(aletarDistancia(currentLocation: manager.location!.coordinate) > 500.0){
+            showAlert()
+        }
         
     }
 
