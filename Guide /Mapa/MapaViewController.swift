@@ -38,6 +38,7 @@ class MapaViewController: UIViewController {
         locationManager.startUpdatingLocation()
     }
     
+    //Autorizacion para el uso de la localizacion por parte del usuario
     private func configureLocationServices(){
         
         //El delegate de locationManager lo encontramos en este doc
@@ -182,7 +183,7 @@ class MapaViewController: UIViewController {
         
         let centroCampus = CLLocationCoordinate2D(latitude: 37.7884,longitude: -3.7773)
         
-        //Combersion de CLLocationCoordinates2D a MKMapPoint
+        //Comversión de CLLocationCoordinates2D a MKMapPoint
         let point1: MKMapPoint = MKMapPoint(centroCampus);
         let point2: MKMapPoint = MKMapPoint(currentLocation);
         
