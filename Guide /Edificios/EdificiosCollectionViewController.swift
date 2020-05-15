@@ -33,7 +33,7 @@ class EdificiosCollectionViewController: UICollectionViewController, UICollectio
     
     // MARK: - Navigation
 
-   //función encargada de detectar que celda se ha pulsado y por tanto mandar su información al "DetailEdificiosViewController"
+   //función encargada de detectar si se ha pulsado la celda y por tanto mandar su información al "DetailEdificiosViewController"
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "ShowDetail" {
             let detail = segue.destination as! DetailEdificiosViewController

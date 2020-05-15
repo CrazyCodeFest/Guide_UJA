@@ -14,7 +14,7 @@ class inicioViewController: UIViewController, UIScrollViewDelegate {
     
     
     //Arrays con las imagenes del pageControl
-    var images: [String] = ["A4","B2","D1", "C2"]
+    var images: [String] = ["A4","imgCesped", "edifNegro"]
     var frame = CGRect (x:0, y:0, width:0, height:0)
     
     
