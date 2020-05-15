@@ -12,14 +12,15 @@ class NotesTableViewController: UITableViewController, EditNoteDelegate {
 
     @IBAction func addNoteButton(_ sender: UIBarButtonItem) {
         
+        //Un array con un string key y un string value
+        //claves = "title", "body"
         let note = ["title:": "", "body": ""]
         notes.insert(note, at: 0)
         self.tableView.reloadData()
         self.selectedIndex = 0
         performSegue(withIdentifier: "ShowEditScreenSegue", sender: nil)
     }
-    //Un array con un string key y un string value
-    //claves = "title", "body"
+    
     
     var notes = [[String: String]] ()
     var selectedIndex = -1
