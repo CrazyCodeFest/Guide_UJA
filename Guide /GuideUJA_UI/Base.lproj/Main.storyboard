@@ -276,11 +276,11 @@
             <objects>
                 <viewController id="J8n-Ru-IC3" customClass="MapaViewController" customModule="GuideUJA_UI" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="g1Y-NZ-3KQ">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="672"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Mvl-8o-RA9">
-                                <rect key="frame" x="0.0" y="64" width="414" height="623"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="623"/>
                             </mapView>
                         </subviews>
                         <constraints>
@@ -411,9 +411,11 @@
         <scene sceneID="GWE-1d-EMN">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="dTx-fB-49H" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Mapa" image="mapa" id="CYn-2r-dJm"/>
+                    <tabBarItem key="tabBarItem" title="Mapa" image="mapa" id="CYn-2r-dJm">
+                        <color key="badgeColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBarItem>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ZZh-1W-S0H">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="ZZh-1W-S0H">
                         <rect key="frame" x="0.0" y="20" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.29010754820000001" green="0.4886764884" blue="0.30719211699999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -490,7 +492,7 @@
     </scenes>
     <resources>
         <image name="A3" width="279" height="181"/>
-        <image name="LogoUJA" width="260" height="194"/>
+        <image name="LogoUJA" width="455" height="349"/>
         <image name="edificio-1" width="30" height="30"/>
         <image name="home" width="30" height="30"/>
         <image name="mapa" width="30" height="30"/>
